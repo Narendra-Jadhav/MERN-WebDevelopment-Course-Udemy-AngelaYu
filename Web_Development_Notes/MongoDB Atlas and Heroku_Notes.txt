@@ -1,0 +1,98 @@
+*********** MongoDB Atlas ***********
+
+* Making a cluster on AWS Cloud Database
+
+* First User -> read and write permissions
+Security Quickstart
+-> Username: admin-narendra
+-> Password: Test123
+
+* Network Access
+
+*** NOTE: Network Access to All IP Addresses for Heroku Deployment
+IP Address to access the database
+
+
+* Connect
+* Connect with Mongo Shell
+
+* Connection string for the application:
+mongosh "mongodb+srv://cluster0.nafi490.mongodb.net/myFirstDatabase" --apiVersion 1 --username admin-narendra
+
+* when we paste this link in our terminal, we will be using the Cluster Database
+
+* on show dbs; we can only see the databases present there i.e admin and local
+
+* to check this, we can make a collection and so make a database
+
+
+****** To connect our Application
+
+1) Connect
+
+2) Connect your application
+
+3) mongodb+srv://admin-narendra:<password>@cluster0.nafi490.mongodb.net/?retryWrites=true&w=majority
+
+Using this link in our application -> mongoose.connect()
+-> putting the password in place of it
+
+4) Now when we start the server with nodemon app.js we will get a fresh new app with 
+new database on the atlas server
+
+We can see the database in the Atlas web application
+
+
+***** Hosting our application on Heroku
+
+1) in our repository
+git init
+
+2) git add .
+
+3) git commit -m "Initial commit"
+
+4) heroku login
+
+5) heroku create
+
+6) touch Procfile
+In it writing:->
+web: node app.js
+
+7) doing changes in app.listen
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+// listen on heroku port, but if not that then on 3000
+
+app.listen(port, function() {
+  console.log("Server started on port 3000");
+});
+
+8) Adding this in package.json
+
+"engines": {
+    "node": "16.15.1"
+  },
+
+
+9) touch .gitignore
+
+10) Adding this to .gitignore file ->
+
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+
+
+11) git add .
+
+12) git commit -m "Add gitignore, procfile and update ports"
+
+13) git push heroku master
+
+DONE!

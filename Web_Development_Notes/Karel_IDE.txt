@@ -1,0 +1,87 @@
+******* Karel IDE *******
+http://stanford.edu/~cpiech/karel/ide.html
+
+
+1. Diagonal Pattern
+
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+ **/
+function main(){
+   //your code here
+   putBeeper();
+   diagonal5Beeper();
+}
+
+function put2Beeper(){
+   move();
+   turnLeft();
+   move();
+   putBeeper();
+}
+
+function turnLeftThrice() {
+   turnLeft();
+   turnLeft();
+   turnLeft();
+}
+
+function diagonal5Beeper(){
+   put2Beeper();
+   turnLeftThrice();
+   put2Beeper();
+   turnLeftThrice();
+   put2Beeper();
+   turnLeftThrice();
+   put2Beeper();
+   turnLeftThrice();
+}
+
+
+2. ChessBoard Pattern
+
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+ **/
+function main(){
+   //your code here
+   threeBeeper();
+   
+   twoBeeper();
+   
+   threeBeeper();
+   
+   twoBeeper();
+   
+   threeBeeper();
+}
+
+function threeBeeper() {
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+}
+
+function twoBeeper() {
+   turnLeft();
+   move();
+   turnLeft();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   turnRight();
+   move();
+   turnRight();
+}
+

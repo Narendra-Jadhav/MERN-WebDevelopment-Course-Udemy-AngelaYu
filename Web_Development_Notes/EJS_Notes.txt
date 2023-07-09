@@ -1,0 +1,69 @@
+**************** EJS ******************
+
+EJS -> Embedded JavaScript templating
+
+** For an Application, if we have to make various webpages, for eg. for all the weekdays;
+then we need similar template. For this we use EJS
+
+-> npm install ejs
+
+** For view engines like ejs to work, they should have a folder named 'views'. 
+In that folder the ejs file should be there.
+The ejs file can have HTML code as in the .html file.
+
+** We can send whether its a weekend or weekday based on the logic in app.js
+So, the ejs template is helpful here, as it is same file for both weekend and weekday
+
+** Marker for the variable for ejs ->
+<%= var %>
+
+**
+res.render("list", {
+    kindOfDay: day
+  });
+  // response is being sent by telling to render the list file with ejs extension in the views folder;
+  // the key: value pair of variables is also there; where the key is variable in ejs file, and value is
+  // what to be sent there
+
+
+
+###### Notes from the Code File of EJS: 
+
+  <!-- Running Code inside the EJS template -->
+    <!-- "Scriptlet" tag is used to run Control Flow JavaScript Code in HTML/EJS file
+    The Scriptlet tag "<% %>" has to be used for each JavaScript line, even if the lines are just one below the other
+
+    <% if (kindOfDay === "Saturday" || kindOfDay === "Sunday") { %>
+      <h1 style="color: purple"><%= kindOfDay %> ToDo List</h1>
+    <% } else { %>
+      <h1 style="color: blue"><%= kindOfDay %> ToDo List</h1>
+    <% } %>
+
+     But most of such logic should be in the backend and not in html file -->
+
+
+<!--
+    <ul>
+      <li><%= newListItems %></li>
+      We are adding the item which we typed in this list. So, again from server to the webpage
+      Every single time we add an item we should be able to make new li. So, using for loop for this
+
+      <% for (let i=0; i < newListItems.length; i++) { %>
+        <li><%= newListItems[i] %></li>
+      <% } %>
+
+    </ul>
+    -->
+
+
+
+-----------------------------------------
+
+******* EJS Layouts
+
+## We can include the header and footer part in their separate ejs files.
+We can use that on webpages like about which should have background css only
+
+<%- include("header") -%>
+
+We can include the layout with this syntac

@@ -1,0 +1,104 @@
+************************ API **************************
+
+API -> Application Programming Interface
+
+-> An API is a set of commands, functions, protocols, and objects that programmers
+ can use to create software or interact with an external system.
+
+eg. jQuery is an API with which we can create softwares
+eg. Tinder uses Facebook API to get information about our friends -> so here API is used
+to interact with an external system (Facebook Database)
+
+API
+
+1. Endpoint
+2. Paths
+3. Parameters
+4. Authentication
+
+--------------------------
+
+1. Endpoint -> Through endpoint we can get what we want from the API
+
+2. Paths -> eg. in the JokesAPI -> the Endpoint is the basic url and after that category
+is added to give specific Path of that
+eg. https://---/Programming
+
+3. Parameters -> if there is a option of custom selection we can type/search the keyword of
+what we want. So, for that there are Parameters which are key, value pairs
+eg. https://----/Programming?contains=debugging
+
+we searched for 'debugging'. The part after '?' is by the Parameter. contains is the
+key and debugging is the value.
+
+There can be various such keys as assigned for Parameters
+
+* When we have more than one query, they are separated by '&'
+
+eg. https:// --- /Programming?type=single&contains=debugging
+
+* these '?, &, =' symbols are important
+
+
+4. Authentication -> 
+when some API has useful information like weather details, the API providing company has to
+keep a track on the usage of the API by someone.
+
+Every time we make a request through api, they should be able to identify you, and how often 
+we are using that as a developer, and charge us accordingly.
+
+eg. openweathermap.org
+
+** How to use such Authenticated API: 
+1. Sign up and Sign In on their webpage
+2. going to API keys. Copy the whole key
+3. going to thier Documentation, ans seeing how to use that.
+The API key has to be put in the Parameter of the URL.
+
+NOTE: the default temperature unit on this website is KElvin. To convert it to Celcius, 
+we have to add that Parameter.
+
+
+**** API KEY got from OpenWeatherMap -> 
+787c33f4061dd537bbb93acbf5d86134
+
+**** Endpoint ->
+https://api.openweathermap.org/data/2.5/weather
+
+** https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=787c33f4061dd537bbb93acbf5d86134&units=metric
+
+for weather of Mumbai,
+units=metric for temp in Celcius
+
+# NOTE: The order of the parameters doesn't matter, as long as they are seperated by '&'
+
+
+--------------------------------------------------------------------
+
+**************** Postman *****************
+
+# Each time testing the API on the browser is not easy
+
+# So, to test the API's we can use -> 'POSTMAN'
+
+After opening Postman
+
+1. Get Request
+2. In rrquest URL putting the Endpoint of the API
+3. Putting KEY and Values in the table
+4. We will get the data in JSON format in a Pretty way
+
+
+---------------------------------------------------------------------
+
+*********************** JSON ***********************
+
+# JSON -> JavaScript Object Notation
+-> it is like JavaScript Objects
+-> we get the API data in JSON format
+
+# data can be also obtained in other formats like 
+XML -> Extensible Markup Language
+HTML
+
+# JSON Viewer Pro Extension

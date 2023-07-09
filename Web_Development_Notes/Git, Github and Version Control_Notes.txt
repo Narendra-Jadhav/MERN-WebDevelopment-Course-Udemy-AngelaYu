@@ -1,0 +1,207 @@
+************* Git, Github and Version Control **************
+
+------------------------------------------------------------------------------------
+
+***** Git
+
+# To track the changes of some file, we have to put it in staging area
+Staging area is an intermediate place where we can decide which files to commit and which not.
+
+1) git init
+-> by this we make the .git directory in that folder. We have to do this only once
+
+2) git status
+it will show chapter1.txt file as untracked
+
+3) git add chapter1.txt
+
+4) git status
+Now we can see that the file has been moved to the Staging area and there we can track
+the changes in the file
+
+5) git commit -m "Complete Chapter 1"
+Now we commmit the things in the staging area. -m is for message, which is important to write.
+The message is always written in Present Tense to show we have done it now. 
+
+6) git log
+We can see what commits are made, when and by whom.
+There we can see a long hash code -> which refers to that specific commit
+
+# Created two new files
+
+7) git add .
+to add all the files in the directory in the Staging Area
+
+8) git commit -m "complete chapter 2 and 3"
+we can commit the changes now
+
+# Sometimes if by mistake we change the contents of our file and also save it.
+We can get the previous commited version. 
+(This is called Version Control).
+
+9) git diff chapter3.txt
+-> it will give the difference between the previous commited file and the file now.
+-> we can copy some part of the previous commit if we want
+
+*** NOTE: Right click by selecting text will copy the text in Hyper
+
+10) git checkout chapter3.txt
+-> if we totally want to delete the changes made now, and get back the previous 
+committed version, then using this command
+
+*** All this what we did was in our Local Repository on our device
+Using Git and Version Control for that
+
+** .git is the local repository
+
+
+------------------------------------------------------------------------------------
+
+***** Github and Remote Repositories
+
+** We can use Git and Version Control to store Repositories on Remote Server on platforms 
+like Github
+
+1) Making a New Repository in Github. For now we made it without Readme File.
+
+2) git remote add origin (url of the repository on github ->
+ https://github.com/Narendra-Jadhav/Story.git here)
+-> this will tell the local repository that we have to transfer the commits 
+made here to some remote repository on the internet
+
+-> we can have any other word in place of origin, but conventionally origin is preferred
+
+3) git push -u origin master
+-> it pushes the local repository to remote repository using the u flag
+-> origin - Name of Remote, master - Name of Branch
+-> master is the main or default branch of our commit
+
+** Now if we reload the github page, we can see that the files have been added to the repository
+on github
+
+** In Insights -> Network we can see the branches
+
+------------------------------------------------------------------------------------
+
+***** Gitignore
+
+-> it is used for the files having secret password, we don't want to push on Github, 
+so we ignore them with this
+-> also there can be files like .DS_Store which is a hidden file, which contains some 
+personal information like how we have sorted our files, which is of no use for 
+other people. So, it is better not to push it on public platform
+
+1) touch .gitignore
+-> creating a hidden gitignore file
+
+2) git add .
+
+git rm --cached -r .
+-> to unstage all the files
+
+3) Adding the file names in .gitignore file which we want to get ignored
+
+** Note: In .gitignore file
+### We have to write the file names we want to ignore on each line
+### We can use '#' hash sign, if we want to write a comment in the file
+### We can use '*.txt' to ignore all the files having .txt file format
+
+4) Now if we stage the files using add ., the ignored files will not be added.
+Also after commit those files will not get committed.
+
+*** NOTE: IMP ***
+-> to hide the .gitignore file ->
+attrib +h .gitignore
+
+-> to open the file ->
+start .gitignore
+
+-> to unhide the file ->
+attrib -h .gitignore
+
+------------------------------------------------------------------------------------
+
+***** Cloning
+
+** Cloning means to Clone/copy/download some repository on remote server onto our 
+local machine
+Inshort downloading a project from github
+
+Command:
+-> git clone (url of that project)
+
+by git log we can get information about their commits
+
+
+-----------------------------------------------------------------------------------
+
+***** Branching and Merging
+
+-> in our project if at some point we want to try out new things and don't want that to 
+affect the main/master branch; we can do that on a parallel branch and even Merge that
+afterwards
+
+1) git branch alien-plot
+-> it will create a new branch of that name
+
+2) git branch
+-> this will give the names of all the branches 
+-> the '*' is front of branch specifies which branch we are currently in
+
+3) git checkout alien-plot
+-> to switch to that branch
+
+** Now, we do some changes to the chapter 1 and 2
+
+4) git add .
+-> adding to staging area
+
+5) git commit -m "modify chapter 1 and 2 to have alien theme"
+-> to commit the changed files
+
+6) git log
+-> we can see the commits, the recent commit has been done to the alien-plot branch
+
+7) git checkout master
+-> we will be switched to the master branch. The files will be again as they were earlier
+
+8) While on master branch
+git merge alien-plot
+-> to merge alien-plot branch with master
+
+9) git push origin master -u
+-> to push the recent changes made to the Remote Repository on Github
+
+** We can do these things directly inside github also
+** Merge is done by doing 'Pull Request'
+
+
+-----------------------------------------------------------------------------------
+
+***** Forking and Pull Requests
+
+-> we can copy a repository from someone's another github account on our Github, so that we
+can make whatever changes we want on that copy => FORKING
+
+-> downloading a repository on our local repository => CLONING
+
+-> Then after making some changes, we can make 'Pull Request' to the owner of the repository,
+ that please include these changes to your repository.
+
+-> If we like those changes we can approve the Pull Request and 'Merge' the forked 
+repository with changes made onto our repository.
+We can also review the changes.
+
+-> In this way we can contribute to the Open Source Projects
+
+
+1) git pull
+-> The git pull command is used to fetch and download content from a remote repository
+ and immediately update the local repository to match that content
+
+2) git fetch
+-> git fetch is a primary command used to download contents from a remote repository
+
+
+*** Learn Git Branching
+https://learngitbranching.js.org/

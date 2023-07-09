@@ -1,0 +1,38 @@
+****************** React.js *********************
+
+** A Javascript Library for building User Interfaces
+** It is a Frontend Framework
+
+** In ReactJS HTML, CSS, JS are combined and not kept separate and their various 
+components are formed.
+
+** So, using ReactJS different components on the Webpage can work differently.
+One component can update itself without the page being reloaded.
+eg. Notification icon
+
+** React Framework will notice the changes in the components and it will render only 
+those components which have changed
+
+#### Create React App: 
+
+1) npm -> it downloads the package. Like buying
+2) npx -> it only uses the package and not store it? Like taking on rent
+
+* npx create-react-app my-app => to create my-app directory having all the required files
+
+* npx create-react-app . => if we have a folder already and want all files in that
+
+## To create React APP
+1. npx create-react-app my-app
+2. cd my-app
+3. npm start
+
+*************************************************************************************
+
+## JSX
+
+
+## React Components
+
+
+## React Props

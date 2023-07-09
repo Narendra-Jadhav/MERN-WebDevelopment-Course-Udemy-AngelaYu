@@ -1,0 +1,154 @@
+<!-- BoilerPlate Code -> html + enter
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+ -->
+
+<!DOCTYPE html> <!-- to tell the browser that the document type is html 5 -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- for metadata of the file. The encoding of the character set is given as utf-8.
+      Encoding with utf-8 is necessary to make our website render correctly for all the visitors
+
+    In meta tag we have a attribute -> description
+    It is used to give the description of our website.
+    The search engine will show that description when some person searches for the name of our website
+     -->
+  <title>Narendra's Personal Site</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--
+  <style>
+  /*Internal CSS -> style tag in the head tag */
+    hr {
+      /* background-color: white; no need of it as the height is zero */
+      /* border-style: dotted;*/
+      border-style: none;
+      border-top-style: dotted;
+      /*border-style: dotted none none; will also work */
+      /*height: 0px; if we don't mention height, it will be by default 0*/
+      border-color: grey;
+      border-width: 5px;
+      width: 5%;
+    }
+  </style>
+-->
+</head>
+
+<body> <!--  style="background-color: #E3FCBF;" -->
+  <!-- CSS - Cascading Style Sheet
+Inline CSS is done using style attribute -->
+
+
+  <!-- img tag -> Self-closing tag
+src -> source of the image. It can be online url or we can give location of it on our local storage
+alt -> alternative text if the image is not able to get loaded -->
+
+  <table cellspacing="15">
+    <!-- cellspacing: for space between cells -->
+    <tr>
+      <td><img src="images/narendra.png" alt="narendra profile picture"></td>
+      <td>
+        <h1>Narendra Jadhav</h1>
+        <p><a href="https://www.linkedin.com/in/narendra-jadhav-318444213/">LinkedIn</a></p>
+        <!-- a tag -> anchor tag.
+        href -> Hyperlink Reference -->
+        <p>
+          <em>Coding ❤ Lover. <strong>Web Development</strong> Enthusiast.</em>
+        </p>
+        <p>
+          I am an Engineering Student, studying BTech in Computer Engineering at VIIT, Pune.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+  <h3>Education</h3>
+  <!-- Unordered List -->
+  <ul>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+  </ul>
+  <hr>
+  <h3>Hobbies</h3>
+  <!-- Ordered List -->
+  <ol>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+  </ol>
+  <hr>
+  <h3>Work Experience</h3>
+  <!-- Table:
+table -> thead(table head) -> tr(table row) -> th(table header)
+      -> tbody(table body) -> tr(table row) -> td(table data/cell) -->
+  <table cellspacing="10">
+    <thead>
+      <tr>
+        <th>Dates</th>
+        <th>Work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2020-2021</td>
+        <td>abc</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>xyz</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <h3>Skills</h3>
+  <table border="1">
+    <tr>
+      <td>
+        <table cellspacing="10">
+          <tr>
+            <td>Web Development</td>
+            <td>⭐⭐⭐⭐</td>
+          </tr>
+          <tr>
+            <td>Data Structures and Algorithms</td>
+            <td>⭐⭐⭐</td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        <table cellspacing="10">
+          <tr>
+            <td>Machine Learning</td>
+            <td>⭐⭐</td>
+          </tr>
+          <tr>
+            <td>Graphic Designing</td>
+            <td>⭐⭐</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="contact.html">Contact Me</a>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+****************** Mongoose *********************
+
+Mongoose ODM -> Object Data Modelling
+
+* It is a framework/package
+* It helps in connecting JavaScript (Objects) and MongoDB (documents)
+* It helps to do MongoDB validation, casting, etc easily
+
+1) deleting the previous fruitsDB database
+
+use fruitDB;
+db.dropDatabase();
+-> database will get deleted
+
+2) npm install mongoose -> in shell
+
+3) writing code in app.js
+
+4) node app.js
+
+* We can see '__v' filed in the database document. It is version key. It contains 
+information about the document

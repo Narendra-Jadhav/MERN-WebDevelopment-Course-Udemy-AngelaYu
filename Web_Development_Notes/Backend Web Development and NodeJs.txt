@@ -1,0 +1,110 @@
+************** Backend Web Development ***************
+
+FullStack = Front-end + Back-end
+
+## Back-end -> Server + Database + Application
+
+- Server (To serve up the HTML, CSS, JS files to the User/client)
+- Database (To store the user data)
+- Application (To think about the business logic and apply it
+Having the functionality like Booking ticket prices)
+
+------------------------------------------------------------------------------------
+### IMP ###
+
+*** With Node we run the code on our server in the backend rather than in the frontend ***
+*** Earlier we requested the server for html, css, js. Then the server gave that, and it ran
+on the client's browser
+*** Now, with node we run all the code on the request of the client, on the server side;
+and only send the Output to the client.
+*** So, the output will load easily on the computer and the client is not able to see
+our code, and the logic we have put into it
+-------------------------------------------------------------------------------------
+
+************** Node.js *****************
+
+# node.js works using Javascript
+
+# 
+- JavaScript was bound to the browser only
+- Node.js helps to interact/access the User's computer/device
+
+eg. Atom is able to access our device information using Node.js
+
+
+** node index.js -> in terminal to run javascript file
+-> console log part will be logged in the terminal
+
+
+--------
+
+** REPL -> Read Evaluation Print Loops
+REPL is like the console where we can directly write the code
+
+In Node REPL we can write the JS code directly
+
+** To open Node REPL -> 'node' command -> then '>' sign comes where we can write code
+
+
+## In REPL also we can use 'tab' to auto complete the word/code
+## By pressing 'tab' twice, we can get all the possibilities of what code we can write
+
+
+## '.exit' or 'Ctrl + c' -> to exit from REPL
+
+## 'clear' to clear the console/the commands we have written -> in CLI
+
+
+
+----------------------------------------------------------
+
+**************** NPM Package Manager *****************
+
+NPM -> Node Package Manager
+
+Helps in installing External Modules
+
+*****
+1. npm init
+2. choosing package name, version, author, etc.
+3. All this creats a package.json file in our project folder
+*****
+
+# Searching for External Modules on npmjs.com website
+
+1. superheroes module
+2. npm install superheroes -> command
+
+3. This module will come in package.json of the project as 'Dependencies' -> i.e our 
+project depends on this module
+
+4. After writing the code in index.js -> running it by-> node index.js in terminal
+
+
+## json is a file format used to organise data
+
+
+
+----------------------------------------------------------
+
+**************** Express.js *****************
+
+Express.js is a node.js Framework
+
+* Express is specifically for Web Development
+
+
+#### Creating Express Server
+
+* For always making a web development project, creating the js file and initializing npm
+in it. With entry point as server.js file
+
+
+*** NOTE: In the Terminal while in the directory, if we enter 'atom .' then,
+that directory gets opened in Atom
+
+
+*** Installing Express for our project -> 
+In the Terminal typing ->
+### npm install express
+Then 'express' package gets added to the dependencies in package.json

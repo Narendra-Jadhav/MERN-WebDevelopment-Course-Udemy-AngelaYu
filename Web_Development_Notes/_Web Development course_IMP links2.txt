@@ -1,0 +1,274 @@
+***** 15/6/22 - 16/6/22 *****
+
+CSS Module
+
+1. HTML, CSS practice
+https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3
+
+
+2. CSS Button generator
+https://css3buttongenerator.com/
+
+
+3. ColorHunt - Color palette
+
+https://colorhunt.co/
+
+https://colorhunt.co/palette/14832
+https://colorhunt.co/palette/2f8f9d3bacb682dbd8b3e8e5
+
+
+4. Sean Halpin Website
+https://web.archive.org/web/20180819202235js_/http://seanhalpin.io/
+
+
+5. CSS Color
+https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+
+
+6. CSS Reference
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+
+7. Emoji/cartoon images
+https://emojipedia.org/
+
+
+8. Favicon Maker
+https://www.favicon.cc/
+
+
+9. Daily UI practice
+https://www.dailyui.co/
+
+
+10. https://collectui.com/
+
+
+11. web safe fonts
+https://www.cssfontstack.com/
+
+
+12. Google Fonts
+https://fonts.google.com/
+
+
+13. Lorem Ipsum
+https://loremipsum.io/
+
+
+14. Vector Icons and Stickers
+https://www.flaticon.com/
+
+
+15. GIF
+https://giphy.com/
+
+
+16. https://flaviocopes.com/rgb-color-codes/
+
+
+
+***** 16/6/2022 - 17/6/2022 *****
+Bootstrap
+
+1. Online code writer
+https://www.codeply.com/
+
+
+2. Bootstrap Documentation
+https://getbootstrap.com/
+https://getbootstrap.com/docs/5.2/components/navbar/
+https://getbootstrap.com/docs/5.2/examples/
+
+
+3. https://ui-patterns.com/
+
+
+4. https://dribbble.com/
+
+
+5. Wireframes
+https://sneakpeekit.com/
+
+
+6. Wireframe and Mockup
+(IMP)
+https://balsamiq.cloud/
+
+******* 22/6/22 - 23/6/22 **********
+
+1. https://bootsnipp.com/
+
+2. https://fontawesome.com/
+
+3. https://search.google.com/test/mobile-friendly
+
+4. https://codegolf.stackexchange.com/
+
+
+
+######################################
+************* JavaScript *************
+
+******* 28/6/2022 *******
+
+1. https://github.com/rwaldron/idiomatic.js
+
+2. https://en.wikipedia.org/wiki/The_Elements_of_Style
+
+
+******* 28/6/22 - 29/6/22 ******
+
+1. Flow Chart
+https://app.diagrams.net/
+
+2. https://waitbutwhy.com/2014/05/life-weeks.html
+
+3. http://stanford.edu/~cpiech/karel/ide.html
+
+4. https://www.jitbit.com/alexblog/249-now-thats-what-i-call-a-hacker/
+
+
+######################################
+************* jQuery ************* 1/7/22
+
+1. https://developers.google.com/speed/libraries#jquery
+
+
+############################################
+**************** Node.js ********************
+2/7/22
+
+1. https://nodejs.org/en/
+
+2. Nodejs documentation and Modules
+https://nodejs.org/api/
+
+3. Typing like hacker (timepass/fun)
+https://hackertyper.com/
+
+
+4. https://www.learnenough.com/command-line-tutorial
+
+
+5. Node Package Manager (NPM)
+https://www.npmjs.com/
+
+
+************ Express.js ***************
+3/7/22
+
+1. http://expressjs.com/en/starter/installing.html
+
+2. https://nodemon.io/
+
+3. https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+4. https://sv443.net/jokeapi/v2/
+
+
+************* API ****************
+8/7/22
+
+1. https://httpstatusdogs.com/
+
+2. https://nodejs.dev/learn/making-http-requests-with-nodejs
+
+
+************* Git *************
+9/7/2022
+
+1. Learn Git Branching
+https://learngitbranching.js.org/
+
+
+************** EJS ****************
+10/7/2022
+
+1. https://www.npmjs.com/package/ejs
+
+2. Express Routing
+https://expressjs.com/en/guide/routing.html
+
+3. Lodash
+https://lodash.com/
+
+
+************** Databases *****************
+12/7/22
+
+1. https://sqliteonline.com/
+
+2. https://www.mongodb.com/
+
+3. https://www.mongodb.com/docs/mongodb-shell/install/
+
+
+****************** MongoDB and Mongoose ********************
+12/7/22
+
+1. https://mongodb.github.io/node-mongodb-native/3.5/quick-start/quick-start/
+
+2. https://www.mongodb.com/docs/drivers/node/current/quick-start/
+
+3. https://mongoosejs.com/
+
+4. 'Deep Work' book by Cal Newport
+
+
+****************** MongoDB Atlas and Heroku *********************
+13/7/22
+
+1. Mongosh shell documentation
+https://www.mongodb.com/docs/mongodb-shell/
+
+2. Deploying application on heroku
+https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
+
+3. https://www.mongodb.com/docs/atlas/troubleshoot-connection/
+
+4. https://www.mongodb.com/docs/manual/reference/connection-string/
+
+5. https://www.mongodb.com/docs/atlas/tutorial/connect-to-your-cluster/#std-label-gswa-connect
+
+6. https://www.mongodb.com/docs/atlas/troubleshoot-connection/#std-label-special-pass-characters
+
+7. login to mongodb for atlas
+
+
+****************** RESTful API ********************
+16/7/22
+
+1. https://medium.com/@saginadir/native-function-chaining-in-javascript-what-we-can-learn-from-jquery-3b42d5d4a0d
+
+2. https://github.com/londonappbrewery/Build-Your-Own-RESTful-API
+
+
+****************** Authentication and Security **********************
+17/7/22
+
+1. https://github.com/londonappbrewery/Authentication-Secrets
+
+2. https://cryptii.com/
+
+3. https://generate.plus/en/base64
+
+4. https://www.npmjs.com/package/mongoose-encryption
+
+5. https://mongoosejs.com/docs/plugins.html
+
+6. https://www.npmjs.com/package/dotenv
+
+7. https://github.com/github/gitignore/blob/main/Node.gitignore
+
+8. https://www.npmjs.com/package/js-sha512
+
+9. https://www.npmjs.com/package/md5
+
+10. https://haveibeenpwned.com/
+
+11. https://www.npmjs.com/package/bcrypt
+
+12. nvm
+https://github.com/nvm-sh/nvm

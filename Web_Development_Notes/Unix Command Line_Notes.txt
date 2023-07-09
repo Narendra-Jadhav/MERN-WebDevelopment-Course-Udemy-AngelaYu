@@ -1,0 +1,100 @@
+**************** The Unix Command Line *****************
+
+## Hyper Terminal
+
+With Pistachio -> Operating System
+
+nut we eat -> Kernal (Hardware)
+
+outer part -> Shell -> User Interface -> helps us to interact with the kernal 
+
+
+* Shell/User Interface is of two types: 
+
+1. GUI -> Graphical User Interface 
+(where we can directly see and open the files, directories, etc by clicking)
+
+2. CLI -> Command Line Interface -> where we have to write commands
+
+
+* Bash Shell -> Bash (Bourne Again Shell)
+- Bash Shell is the CLI for Unix Systems
+
+eg. Linux runs on Unix like System
+
+-----------------------------------------------------------------------------
+
+NOTES: 
+
+1. '~'(tilde) sign shows that we are inside the 'Users' directory. We are by default inside that
+
+
+2. 'ls' command -> ls = list -> lists all the files and directories inside that
+
+
+3. 'cd' command -> cd = change directory -> changes the directory to what we mention
+
+
+4. NOTE: after we write 2,3 alphabets of the word(directory name) we want we can press 'tab'
+to autofill the name
+
+
+5. 'cd ~' -> it will take us back to the root directory
+
+
+6. 'cd ..' -> it will take us back to previous directory
+
+
+7. cd /Users/naren/ -> root directory address
+'/' is the Root Directory
+
+
+8. we can write 'cd' and then drag and drop the folder we want to go to
+
+
+9. Previous command can be copied using 'Up Arrow' key and below command using 'Down key'
+
+
+10. Shortcuts: 
+
+* to edit in between the command -> alt + clicking where we want to edit
+
+* to go to the start -> ctrl + a
+
+* to go to the end -> ctrl + e
+
+* to delete the command -> ctrl + u
+
+
+11. 'mkdir' -> to make a Directory
+
+
+12. 'touch text.txt' -> to make a file
+
+
+13. 'start' file name -> to open the file in the default text editor
+
+
+14. 'pwd' -> pwd = print working directory -> gives the path of the directory we are currently in
+
+
+15. 'atom' file name -> to open inside Atom
+
+
+16. 'rm' file name -> rm = remove -> to remove a file
+If it asks confirmation -> type 'y' and then 'enter'
+
+
+17. 'rm *' -> to remove all the files inside a directory
+
+
+18. 'rmdir' directory or 'rm -r' directory -> to remove a directory
+
+
+19. sudo -> Super User Do -> has Admin Priviledge
+
+
+20. rm -rf -> rf stands for remove forcefully -> not asking for confirmation
+
+
+21. rm -rf --no-preserve-root -> do not preserve anything about that on the hard-disk

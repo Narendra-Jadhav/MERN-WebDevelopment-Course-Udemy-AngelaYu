@@ -1,0 +1,147 @@
+******************* Authentication And Security ********************'
+
+***** Authentication ->
+
+For users
+# Create an account
+# Login
+# Restrict Access
+
+** We can have various levels of Security for Authentication
+
+* Levels increase when we encrypt passwords, use hashing, etc.
+
+## https://github.com/londonappbrewery/Authentication-Secrets
+
+
+1) Level 1 -> Username and Password
+* Checking by findOne method of mongoose from the Database
+* Storing Password as Plain Text in the database
+
+2) Level 2 -> Database Encryption
+
+* Caesar Cypher -> in this the letters are shifted by a specific number. It is a very 
+basic level of encryption
+
+# Password + Key ---Cipher Method---> Cipher Text
+
+***
+// Environment Variables -> .env => To secure important secrets by not including in app.js
+
+require('dotenv').config();
+// including it at the start of file, to use Environment Variables .env
+// npm i dotenv
+
+// const secret = "";
+// Not including such important secret in app.js, as when we commit, 
+it will also be visible to people
+// so, including it in .env file. We can include API Keys in the .env file which are secret
+// SECRET=Thisisour.
+// API_KEY=jbewjebcjbeeeqiwdniwqnqwcqw
+// *** NOTE: Writing names in Snake Case with Underscores for Space and totally in 
+capital and no space before and after =
+// Writing like this in the .env file
+// We can fetch from the .env file by 'process.env.SECRET'
+// console.log(process.env.API_KEY);
+
+// *** NOTE: Adding .env in .gitignore so that this folder don't get commited
+
+
+3) Level 3 -> Hashing Passwords
+
+* A Hash Function converts a string into Hash easily, but it is very hard to turn it back
+into the string. So, hashing is used
+* A Hashing Function is used to change the Password into Hash while registering and 
+while login the Password is again changed to Hash and both these are compared. If the 
+hash are equal then the password is correct. 
+So, in the database only the Hash of password is stored.
+
+* Using 'md5' npm package as Hash Function
+
+** NOTE: It is hard to decrypt if the password is tough
+
+
+4) Level 4 -> Hashing and Salting with bcrypt
+
+** Even if our user used some simple Password, we make its hash hard and uncrackable
+by using Salting. 
+** Hasing the hash by adding some salt (radom string) at the password's end to make it long
+
+** Salt is different for different passwords. It is stored in the database
+
+** Salting Rounds -> Number of times Hashing the hash again and again using salt
+
+* npm i bcrypt
+# bcrypt is a much better hash function
+
+*** NOTE: bcrypt wants stable version of node. So, if our version is not stable we
+can go back to stable by using 'nvm'
+
+
+5) Level 5 -> Cookies and Sessions
+
+** cookie -> when we use websites and enter some information without signing in/ by 
+signing in sometimes; the websites make Cookie of that information on our Browser. 
+
+* when we visit the website again we can get that information again due to that. Or we 
+see similar products on other websites due to Cookies.
+
+## There are various types of Cookies. But we are going to see SESSIONS. 
+
+** Sessions work in the period between Logging in a page, till logging out of it.
+* When we login a cookie is created and so even if we close the browser, the next time 
+we visit the website we will be logged in and no need to login again.
+But when we Log out, the cookie gets destroyed and now we need to login again to visit
+our account.
+
+** Cookies and Sessions - using 'Passport'
+
+* Packages -> passport, passport-local, passport-local-mongoose, express-session
+
+
+6) Level 6 -> Third Party OAuth - Open Authorisation
+
+# Why OAuth -
+i) Granular Access Levels -> The website can ask for some specific data from Facebook, 
+Google, etc.
+
+ii) Read/Read+Write Access
+
+iii) Revoke Access -> User can deauthorise the access to that website
+
+# Steps ->
+1. Set up your app
+2. Redirect to Authenticate
+3. User logs in with Facebook, Google credentials
+4. User Grants Permission
+5. Receive Authorisation code -> to authenticate user
+6. Exchange AuthCode (limited use) for Access Token (Longer use) -> to access information 
+about the user
+
+** We will do Google OAuth using Passport
+1] npm install passport-google-oauth20
+
+2] Create an application in Google Developer Console
+
+3] Create Project, Credentials, OAuth Consent, Scopes...
+
+4] OAuth Client ID
+
+5] Putting Client_ID and Client_Secret in the .env file
+
+
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}

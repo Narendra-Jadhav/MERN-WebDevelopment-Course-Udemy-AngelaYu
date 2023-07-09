@@ -1,0 +1,44 @@
+##################  Heroku  #################
+
+** NOTE: We are not using Github Pages because it only works for static pages, and we will 
+be not able to use it for this
+So, Heroku is a great choice here
+
+** 
+heroku login
+-> run this command
+
+** Making the app listen on Port -> process.env.PORT
+
+
+** Making the Procfile is necessary and it should contain how we will run our server
+web: node app.js
+
+
+** Adding our work to git
+git init
+git add .
+-> adding all our files
+git commit -m "First Commit"
+-> we can include a message with commit
+
+** Deploy the app
+heroku create
+-> to create an app on Heroku
+
+git push heroku master
+-> it will send our files to the heroku servers
+
+
+## 
+heroku logs 
+-> command to check if something is wrong
+
+
+****** What if we do some changes in our code ->
+
+git add .
+
+git commit -m "Change success page h1"
+
+git push heroku master

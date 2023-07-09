@@ -1,0 +1,136 @@
+**************** REST API *****************
+
+* REST -> REpresentational State Transfer
+
+HTTPS Request => HTTP Secure
+- use cryptography and encrypt our request so if anybody does intercept 
+the request they won't be able to know what it says
+
+## API is like a Menu for Client and Server
+Client -> API -> Server
+
+## REST is the architechtural style for the APIs
+
+## All the web APIs should follow REST rules
+
+1) HTTP Request Verbs
+
+Get, Post, Put, Patch, Delete
+
+# Get - Read
+eg. app.get(function(req, res))
+
+# Post - Create
+
+# Put, Patch - Update
+-> Put => Sending the whole document to update
+-> Patch => Sending only that part which needs to be updated
+
+# Delete - Delete
+
+2) Specific Pattern of Routes/Endpoint URLs
+
+
+--
+https://github.com/londonappbrewery/Build-Your-Own-RESTful-API
+
+https://blog.robomongo.org/studio3t-free/
+
+
+
+----------------------------------------------------------
+*** RESTful API
+
+# HTTP Verbs	/articles				/articles/cricket
+
+* GET			Fetches all the articles	Fetches the article on cricket
+* POST		Creates one new article				-
+* PUT				-				Updates the article on cricket
+* PATCH			-				Updates the article on cricket
+* DELETE		Deletes all the articles	Deletes the article on cricket
+
+** NOTE: This table is according to the RESTful API conventions
+# Post request should be sent to the collection of items rather than a specific item
+
+
+*** Creating our API ->
+
+# NOTE: We can make all these get, post, delete requests with Postman
+
+1) Making Database - WikiDB (like wikipedia)
+
+2) Setting up the Server
+Like we have done for the earlier projects
+npm init, modules install, code in app.js for server and mongoose
+
+3) GET all articles -> Client will get the data from the API
+
+4) POST an article into the API from the client
+-> Using Postman for giving the Post request as we will not have an html form this time
+
+# In Postman selecting: POST -> localhost:3000/articles -> Body -> urlencoded -> entering
+title and content
+
+5) DELETE all articles
+After writing the delete route code in app.js, 
+when we make delete request with Postman, all the articles get deleted
+
+    {
+        "_id": "62d0a3e49b182e54bf9ae8a5",
+        "title": "REST",
+        "content": "REST is short for REpresentational State Transfer. It is an architectural style for designing APIs."
+    },
+    {
+        "_id": "62d17e0ccf0dfe35d07b4b80",
+        "title": "API",
+        "content": "API stands for Application Programming Interface. It is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer."
+    },
+    {
+        "_id": "62d17e32cf0dfe35d07b4b81",
+        "title": "Bootstrap",
+        "content": "This is a framework developed by Twitter that contains pre-made front-end templates for web design"
+    },
+    {
+        "_id": "62d17e40cf0dfe35d07b4b82",
+        "title": "DOM",
+        "content": "The Document Object Model is like an API for interacting with our HTML"
+    },
+    {
+        "_id": "62d2d8febcf5e5e3fc5119e5",
+        "title": "Cricket",
+        "content": "Cricket is a bat-and-ball game played between two teams of eleven players each on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps.",
+        "__v": 0
+    }
+
+6) GET one article
+
+* NOTE: in url encoding for space -> '%20' is used
+
+7) PUT -> update an article by totally replacing with what is given
+
+8) PATCH -> update an article by replacing with only what is diferent/mentioned
+
+.replaceOne() is used for Put.
+
+- Here, it will overwrite always. So the overwrite flag should not be mentioned.
+
+Article.replaceOne(
+    {title: req.params.articleTitle},
+    req.body,
+    function(err){
+        //Do what you want to do here
+    }
+);
+.updateOne() is used for Patch.
+
+- Here, it will wrap in $set always. So the overwrite flag should not be mentioned.
+
+Article.updateOne(
+    {title: req.params.articleTitle},
+    req.body,
+    function(err){
+        //Do what you want to do here
+    }
+);
+
+9) Delete One article

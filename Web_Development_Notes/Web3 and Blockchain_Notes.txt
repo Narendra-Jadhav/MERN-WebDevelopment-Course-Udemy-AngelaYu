@@ -1,0 +1,95 @@
+Hash -> whatever the string/data it may be; the Hash is always of 64 characters
+
+Genesis Block -> First Block having previous hash as 00000....
+
+Block => Some piece of data encrypted as a hash using a Nonce (key).
+
+** Nonce + Data + Previous Hash -> Give the Hash of a block
+
+Chain of Blocks => Blockchain
+Each Block has the Hash of Previous Block
+
+Each block's Hash is calculated from -> 
+Data (that is to be hashed) + Nonce (key) + Previous Block's Hash
+
+Note: We can decide how many zeroes should the hash begin with, by setting the value of
+Nonce. eg. For 5 zeroes at the start Nonce will be some number
+
+* As all the blocks are connected, the data is immutable. If we change the data of 
+one block, all blocks' data will get changed. And so it is impossible 
+
+* Distributed Blockchain => to increase the security
+There are copies of Blockchains at each distributed server. If some blockchain is 
+modified, its hash becomes different from other copies and so others are safe
+
+
+## Ethereum ==>>
+
+*** Smart Contracts => We can store Code inside the block.
+* So, we can set some code in it. Eg. We can create a decentralized app having a block
+of code which will automatically do the thing if condition is met. 
+Eg. for Crowdfunding if a specific amount is reached the money will be automatically
+sent to the receiver
+
+
+*** DApps -> Decentralised Apps
+-> Release Tokens
+
+*** Internet Computer (ICP) -> Building DApps using Dfinity's Internet Computer
+
+# Canisters -> in it, it is like the code never stops running. So, no need of data storage
+
+
+####################################
+
+*** Internet Computer Development
+
+** NOTE: We can find ic projects in Network
+
+** http://localhost:8080/
+
+** 
+1) For creating DApps, going to VSCode and starting wsl Ubuntu and opening ic-projects there.
+2) command -> dfx new hello --> for creating DApp named hello
+# command -> explorer.exe . => for opening the ic-projects folder
+3) dfx start => to start the local Internet Computer
+4) dfx deploy => in new terminal tab, to deploy the application
+5) npm start => to start the server
+6) we can see our project running at -> http://localhost:8080/
+
+##################################################################
+##################################################################
+
+* DeFi DApp -> Decentralised Finance DApp
+Programming for ICP (Internet Computer Projects) with Motoko language
+
+* Motoko is a language for writing Internet Computer Smart Contracts
+* Motoko file => hello.mo -> 'mo' extension
+
+* This project is inspired by 'Compound Protocol' which is a Money Market Protocol
+
+##################################################################
+
+***** Creating Our Own Crypto Token *****
+
+1) Coins -> they require thier own Blockchain eg. Bitcoin, Doge
+They require blockchain and Miners who will mine the coin.
+
+2) Tokens -> they can take advantage of an existing Blockchain such as Ethereum or Internet Computer 
+eg. Shiba Token built on Ethereum blockchain
+-> Tokens can be used for Payment, as Equity (its like shares of a company)
+
+**** We will create our own Token ****
+-> it is inspired from 'Curve' which is used for exchange of coins
+
+*********************************************
+**** Internet Identity ****
+# A way to Authenticate Users.
+-> It doesn't ask for any of our username, password, or any information. So, all our information is safe from big companies.
+-> It only uses Fingerprint or face unlock from device OR the PIN set on the device.
+
+##################################################################
+##################################################################
+
+*********** NFT Marketplace *************
+=====> Minting, Listing and Selling Non-Fungible Tokens (NFTs) on ICP <====

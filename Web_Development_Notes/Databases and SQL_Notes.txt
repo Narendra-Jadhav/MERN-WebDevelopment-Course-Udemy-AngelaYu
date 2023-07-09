@@ -1,0 +1,179 @@
+************************ Databases *************************
+
+Database -> To store the User Data
+eg. storing the blog posts
+
+1) SQL -> Structured Query Language
+eg. MySQL, PostgreSQL
+
+-> Tabled structure
+-> Data cannot be added easily only to some specific item -> Requires a schema (initial 
+structure of table in mind) -> less flexible to changes
+-> Relational - good at establishing relations with the data
+   So, SQL is better when thier are a lot of relations between various tables of data
+-> Scalability
+Scales Vertically
+SQL is less scalable. The data has to be added on top of each other
+-> Costlier
+
+-------------------------------------------------
+
+2) NoSQL -> Not only Structured Query Language
+eg. MongoDB, redis
+
+-> Structure is like JavaScript Objects or JSON -> Document Structure
+-> Data can be added easily to a specific item; as there are key: value pairs
+More flexible to changes
+-> Non-relational - not good at establishing relations with the data
+   NoSQL is better when there is one to many relation.
+   eg. 1 user to many posts of him on Instagram
+-> Scalability
+Horizontally scalable
+NoSQL is more Scalable. It can have various parallel databases, which speeds up the process.
+Distributed structure
+-> Less costly
+
+
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+*** SQL ***
+
+# For any kind of database, there are 4 basic operations ->
+- Create
+- Read
+- Update
+- Destroy
+=> CRUD
+
+1) Creating a Table => CREATE
+
+CREATE TABLE products (
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+  )
+
+NOT NULL is for making sure that no row is made which doesn't has an ID, 
+MONEY is a datatype in SQL, 
+Primary Key is unique for each row in a database
+
+
+2) Inserting into a Table
+
+insert into products
+values (1, "Pen", 1.20)
+
+insert into products (id, name)
+values (2, "Pencil")
+
+
+3) Reading from the Table => READ
+
+SELECT * FROM products 
+
+SELECT name, price FROM products -> to select specific columns
+
+SELECT * FROM products where id=1 -> to select specific rows/data
+
+
+4) Updating the table => UPDATE
+
+UPDATE products
+SET price=0.80
+WHERE id=2
+
+
+5) To Alter the Table - adding or removing columns => UPDATE
+
+ALTER TABLE products
+ADD stock INT
+-> Adds stock named column
+
+UPDATE products
+SET stock=12
+WHERE id=2
+-> to set values in the stock column
+
+
+6) Deleting rows => DELETE
+
+DELETE FROM products
+WHERE id=2
+
+
+7) To delete Columns
+
+ALTER TABLE products
+DROP COLUMN stock
+
+
+## SQL Relationships
+
+1) Foreign Key -> it is same in other table. With the help of this we can make relation 
+with other table
+
+FOREIGN KEY(product_id) REFERENCES products(id)
+-> id is the Primary KEY in the other table- products
+
+*
+CREATE TABLE customers (
+  id INT NOT NULL,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  address STRING
+  )
+
+*
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+  )
+
+*
+INSERT INTO customers
+VALUES (1, "Narendra", "Jadhav", "4, Gulmohar Vihar, Nashik")
+
+INSERT INTO customers
+VALUES (1, "Angela", "Yu", "5, Star Street, London")
+
+*
+Update customers
+SET id=2
+where first_name="Angela"
+
+*
+INSERT INTO orders
+VALUES (1, 4362, 2, 1)
+-> This means Angela customer (id = 2), bought a Pen (id=1)
+
+
+2) Inner Join
+
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id
+
+-> Selecting those things we want from the two tables with 'table_name.column'
+-> From 'table name where Foreign Key is there'
+-> INNER JOIN 'table name where Primary Key' is there which has to be joined to the Foreign key
+-> ON Foreign_Key = Primary_Key
+
+Joining Orders and Products tables
+
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders
+INNER JOIN products ON orders.product_id = products.id
+
+** Joining 3 tables 
+
+SELECT orders.order_number, customers.first_name, customers.last_name, products.name, products.price
+FROM orders
+INNER JOIN products ON orders.product_id = products.id, customers ON orders.customer_id = customers.id

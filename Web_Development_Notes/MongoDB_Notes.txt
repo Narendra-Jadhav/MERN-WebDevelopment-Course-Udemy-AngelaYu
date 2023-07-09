@@ -1,0 +1,187 @@
+********************** MongoDB *************************
+
+
+### CRUD Operations
+
+1) In the command line
+-> mongod
+-> this command will spin up a mongodb server for us. It is like the localhost server
+
+2) Opening a new tab in the terminal, because when the server is running we cannot run
+commands there
+
+3) mongo
+-> by this command we will open the mongo shell, where we can write the mongodb queries
+
+4) help
+-> this command will show the commands we can type in mongodb
+
+5) show dbs;
+-> it will show the current databases.
+
+* NOTE: It is not compulsory to use ';' at the end of queries
+
+6) use shopDB
+-> to create a database
+-> but we will be not able to see it in list now; as database should have some content
+inside it to be shown in the list
+
+7) db
+-> it will show the current database we are in
+
+** CREATE **
+
+8) db.products.insertOne({_id: 1, name: "Pen", price: 1.20});
+-> products is the collection. If if doesn't exist it will get created now
+-> by insertOne() we can insert one document in the form of JavaScript Object/ JSON
+-> insertMany() for inserting many documents at a time
+
+-> collection => table, document => rows, fields (_id, name, price) => columns
+
+9) show collections
+
+** READ **
+
+10) db.products.find()
+-> returns all the documents
+-> is has the syntax => db.products.find({query},{projection})
+query = specific condition to select rows (document), projection = columns (fields) to select
+
+11) db.products.find({name: "Pencil"})
+-> gives document having name- pencil
+
+12) db.products.find({_id: 1}, {name: 1})
+-> document where id=1 and give fileds of name and _id
+
+NOTE: _id is by default selected, even if we don't mention it
+
+# To deselect _id, so that it will be not shown->
+db.products.find({_id: 1}, {name: 1, _id: 0})
+
+
+13) ** Operators **
+db.products.find({price: {$gt: 1}});
+-> $gt is greater than operator
+
+
+*** NOTE: we use '_id' because it is also the id assigned by mongodb. So, we use the same 
+keyword/variable to use mongodb functionality for _id.
+
+*** UPDATE ***
+
+14) db.products.updateOne({_id: 1}, {$set: {stock: 32}})
+-> updateOne to update one document
+-> updateOne({which document to update}, {what to update})
+-> $set -> to add value
+=> if stock is not present it will create and assign that value to it, else
+if already present it will update with new value
+
+*** DELETE ***
+
+15) db.products.deleteOne({_id: 2})
+-> to delete the document where _id=2
+
+
+*** Relationships ***
+
+16) 
+db.products.insertOne(
+  {
+    _id: 3,
+    name: "Rubber",
+    price: 1.30,
+    stock: 43,
+    reviews: [
+      {
+        authorName: "Sally",
+        rating: 5,
+        review: "Best rubber ever!"
+      },
+      {
+        authorName: "John",
+        rating: 4,
+        review: "Awesome rubber!"
+      }
+    ]
+  }
+)
+
+Written in Atom and then pasted in shell
+-> reviews field is also added. It is an array, which contains various documents
+-> So, this is one to many relation => one product has many reviews
+
+17) db.products.find().pretty() -> to display in a nice way
+
+18) There can be other method for Reationship
+
+{
+orderNumber: 3243,
+productsOrdered: [1, 2]
+}
+-> productsOrdered has the array of id's of products
+
+
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+************ MongoDB with Node.JS **************
+
+1) Using Native MongoDB Driver
+
+2) Using package Mongoose (better way)
+
+** 1)
+
+-> creating FruitsProject directory
+
+-> touch app.js
+
+-> npm init or npm init -y => if we want to keep everything to default
+
+-> npm install mongodb => to install the mongodb driver
+
+-> 
+(Inside app.js) ->
+
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+// assert is something for Validation in MongoDb
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+// its the url for mongodb. 27017 is the port number for mongodb. We are running it on localhost
+
+// Database Name
+const dbName = 'fruitsDB';
+// it will create the database, if not already present
+
+// Create a new MongoClient
+const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  const db = client.db(dbName);
+
+  client.close();
+});
+
+-> node app.js => we will get connected to the server
+
+-> Inserting documents (data)
+
+-> if we use show dbs, in mongo shell; we can see fruitsDB there.
+So, the database has been created by node.js using mongodb driver
+
+(Note: we will see 6 documents, as first time there was error so, we ran the code again)
+
+-> Finding the documents from node.js
+we can console log the documents
+We will get JavaScript objects
+
+
+** db.collection.drop()
+-> to delete a collection

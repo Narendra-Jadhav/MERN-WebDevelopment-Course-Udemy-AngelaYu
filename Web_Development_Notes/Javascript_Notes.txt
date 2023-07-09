@@ -1,0 +1,575 @@
+*** JavaScript ***
+
+1. alert("Hello");
+It pops a message on the window of browser. Similar to print() function
+
+2. JavaScript Datatypes
+String, Number, Boolean
+
+3. typeof(123); -> number -> Used for type of the datatype
+
+4. prompt("Enter your name: ");
+Used for the user to Input something.
+Similar to scanf or input()
+
+5. JavaScript Variables
+Syntax: var myName = "Narendra";
+var myName = prompt("Enter your name: ");
+
+# var keyword is used only while firstly making the variable, not always 
+
+eg.
+alert("Hello");
+alert("World!!!");
+
+var myName = prompt("Enter your Name: ");
+alert(myName);
+
+
+6. Naming Conventions for JavaScript Variables: 
+i) variables should not be Keywords eg. var
+ii) should not start with numbers eg. 12my
+iii) should not contain spaces
+iV) variables can contain only numbers, letters, _, $. Any other character is not allowed
+
+* Camel Casing -> helloWorld
+
+
+7. String Concatenation -> Using '+'
+eg.
+var message = "Hello";
+var myName = "Narendra";
+
+alert(message + " there, " + myName + ".");
+
+
+8. Length of Strings
+# string.length
+
+eg. 
+var name = "Narendra";
+name.length;
+
+//Note: This name.length gets printed in the Console
+
+alert(name.length);
+
+eg. 
+var tweet = prompt("Compose your Tweet: ");
+var tweetCount = tweet.length;
+alert("You have written " + tweet_char + " characters, you have " + (140-tweet_char) + " characters left.");
+// bracket for (140-tweet_char) is must
+
+
+9. Comments in JavaScript
+
+//This is a single line comment
+/* This is a 
+multi-line
+comment */
+
+
+10. String Slicing
+
+eg.
+var name = "Narendra";
+name.slice(0,3);
+// slice function is used; (starting position, last position + 1)
+
+
+eg.
+var tweet = prompt("Compose your Tweet: ");
+var tweetCount = tweet.length;
+// alert("You have written " + tweet_char + " characters, you have " + (140-tweet_char) + " characters left.");
+// bracket for (140-tweet_char) is must
+
+
+var slicedTweet = tweet.slice(0,140);
+alert("Your tweet: " + slicedTweet);
+
+## Shortcut:
+alert(prompt("Compose your Tweet: ").slice(0,140));
+
+
+11. Changing Casing in text
+eg.
+var name = "Narendra";
+name.toUpperCase();
+//toUpperCase() method is used to change ALL characters to Uppercase
+name.toLowerCase();
+//toLowerCase() method is used to change ALL characters to Lowercase
+
+
+eg.
+var name = prompt("What is your name?");
+var firstCharacter = (name.slice(0,1)).toUpperCase();
+var restOfName = (name.toLowerCase()).slice(1,);
+// we can also use (1,name.length)
+
+alert("Hello, " + firstCharacter + restOfName + "!");
+
+
+12. JavaScript Operators
+
++, -, /, *
+% (Modulo Operator) -> returns the Remainder
+eg. 10 % 4 = 2
+
+eg.
+// Dog Age to Human Age Formula
+
+var dogAge = prompt("How old is your dog?");
+
+var humanAge = (dogAge - 2) * 4 + 21;
+
+alert("Your dog is " + humanAge + " years old in human years.");
+
+
+## Increment Operator -> ++ -> x++ -> x=x+1
+## Decrement Operator -> -- -> x-- -> x=x-1
+
+## x+=2 -> x=x+2
+## x-=2 -> x=x-2
+## x*=2 -> x=x*2
+## x/=2 -> x=x/2
+
+
+13. console.log();
+* It is used to print on the console.
+* Difference between alert and console.log is that:
+-- alert is for the users. Users can see it
+-- console.log is for the developer. He can use it for debugging, etc.
+eg. console.log("Hello World");
+
+
+14. JavaScript Functions
+
+# Creating a Function:
+function getMilk(){
+
+}
+
+# Calling the Function:
+getMilk();
+
+eg.
+function getMilk(){
+    console.log("Get out of house");
+    console.log("Go to store");
+    console.log("Buy milk");
+    console.log("Come home");
+}
+
+getMilk();
+
+
+###### Parameters and Arguments ######
+
+function getMilk() {   
+  console.log("leaveHouse");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveUp");
+  console.log("moveRight");
+  console.log("moveRight");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveDown");
+  console.log("moveLeft");
+  console.log("moveLeft");
+  console.log("enterHouse");
+}
+
+##
+function getMilk(money){
+    var noOfBottles = Math.floor(money / 1.5);
+//1.5 -> cost of one bottle
+    console.log("Maximum number of bottles which can be bought is: " + noOfBottles);
+}
+
+getMilk(5);
+
+** Math.floor() -> to round off to floor
+
+----------------------------------
+#### Life in Weeks Solution: 
+
+function lifeInWeeks(age) {
+    
+/************Don't change the code above************/    
+    
+    //Write your code here.
+    var remainingYears = 90 - age;
+    var remainingDays = 365 * remainingYears;
+    var remainingWeeks = 52 * remainingYears;
+    var remainingMonths = 12 * remainingYears;
+    
+    console.log("You have " + remainingDays + " days, " + remainingWeeks + " weeks, and " + remainingMonths + " months left.");
+    
+/*************Don't change the code below**********/
+}
+
+lifeInWeeks(20);
+-----------------------------------
+
+****** Function with Return **********
+
+eg.
+function getMilk(money){
+    var noOfBottles = Math.floor(money / 1.5);
+//1.5 -> cost of one bottle
+    console.log("Maximum number of bottles which can be bought is: " + noOfBottles);
+
+    return money % 1.5;
+}
+
+var change = getMilk(4);
+
+console.log("The chnage is: " + change)
+
+
+
+******** BMI Challenge *********
+
+//Create your function below this line.
+//The first parameter should be the weight and the second should be the height.
+
+function bmiCalculator(weight, height) {
+    var bmi = Math.round(weight / (height * height)); //Math.pow(height, 2)
+    return bmi;
+}
+
+
+/* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+
+var bmi = bmiCalculator(65, 1.8); 
+
+bmi should equal 20 when it's rounded to the nearest whole number.
+
+*/
+
+var bmi = bmiCalculator(65, 1.8);
+console.log("Calculated BMI is: " + bmi);
+
+
+#### NOTE: 
+1. Math.round() -> to round off a number to the nearest integer
+
+2. Math.pow(base, exponent) -> to power a number 
+
+
+---------------------------------------------------------------------------------
+
+
+15. JavaScript Random Numbers
+
+Math.random();
+- gives random number between 0 and 1 (0 inclusive, 1 exclusive) i.e. 0 to 0.999999...
+ (16 decimal places)
+- it is a floating point number
+
+eg.
+Dice Random Number generator
+var n = Math.random();
+n = n * 6; // -> 0*6 - 0.999*6 -> 0 to 5.9999
+n = Math.floor(n) + 1;  // gives random integers from 1 to 6 -> Dice
+console.log(n);
+
+
+eg.
+Love Score Calculator
+
+var person1 = prompt("Person 1: ");
+var person2 = prompt("Person 2: ");
+
+var loveScore = Math.floor(Math.random() * 100) + 1;
+
+alert("The Love Score between " + person1 + " and " + person2 + " is " + loveScore + "%");
+
+----------------------------------------------------------------
+
+16. Java If-Else Conditionals
+
+eg.
+if(track === "clear"){
+    goStraight();
+} else {
+    turnRight();
+}
+
+
+17. Comparators
+
+=== -> is equal to
+!== -> is not equal to
+>, <, >=, <=
+
+## NOTE: Difference between == and === ->
+- == checks only the value and not the datatype
+- === checks both the value and the datatype
+
+eg. 1 and "1" are equal in terms of ==, but are different in case of ===
+
+
+18. Combining Comparators
+
+- && -> AND
+- || -> OR
+- ! -> NOT
+
+eg.
+if (loveScore > 70) {
+}
+if (loveScore > 30 && loveScore <= 70) {
+}
+if (loveScore <= 30) {
+}
+
+
+--------- BMI Calculator Advanced -----------
+
+function bmiCalculator (weight, height) {
+    var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
+    var interpretation = "";
+    if (bmi < 18.5){
+        interpretation = "Your BMI is " + bmi + ", so you are underweight.";
+    }
+    if (bmi >= 18.5 && bmi <= 24.9){
+        interpretation = "Your BMI is " + bmi + ", so you have a normal weight.";
+    }
+    if (bmi > 24.9){
+        interpretation = "Your BMI is " + bmi + ", so you are overweight.";
+    }
+    
+    return interpretation;
+}
+
+var bmi = bmiCalculator(65, 5);
+
+console.log(bmi);
+
+
+
+19. Nested If-else
+
+
+------------- Leap Year Challenge ---------------------
+
+function isLeap(year) {
+    
+/**************Don't change the code above****************/    
+    
+    //Write your code here.
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                return "Leap year.";
+            } else {
+                return "Not leap year.";
+            }
+        } else {
+            return "Leap year.";
+        }
+    } else {
+        return "Not leap year.";
+    }
+
+/**************Don't change the code below****************/    
+
+}
+
+var result = isLeap(2200);
+console.log(result);
+
+
+20. else-if
+
+if () {
+
+} else if () {
+
+} else {
+
+}
+
+
+----------------------------------------------------------
+
+21. JavaScript Arrays -> Collection of items
+
+eg.
+var eggs = ["a", "b", "c", "d", "e"];
+var myEgg = eggs[2]; -> it will give "c"
+
+eggs.length; -> 5
+
+eggs.includes("c"); -> checks if that item is present in the array
+returns true if present, else returns false 
+
+eggs.push("z"); -> pushes the item at the end of array
+
+eggs.pop; -> pops out the last element of the array
+
+
+####### FizzBuzz ########
+
+var output = [];
+var n = 1;
+
+function fizzBuzz() {
+
+    if(n % 3 === 0 && n % 5 === 0) {
+        output.push("FizzBuzz");
+    } else if (n % 3 === 0) {
+        output.push("Fizz");
+    } else if (n % 5 === 0) {
+        output.push("Buzz");
+    } else {
+        output.push(n);
+    }
+
+    n++;
+    
+    console.log(output);
+}
+
+### Challenge ###
+
+function whosPaying(names) {
+    
+/******Don't change the code above*******/
+    
+    //Write your code here.
+    var num = Math.floor(Math.random() * (names.length));
+    
+    return (names[num] + " is going to buy lunch today!");
+
+/******Don't change the code below*******/    
+}
+
+
+------------------------------------------------------------------
+
+22. While Loops
+
+while (something is true) {
+	// Do something
+}
+
+eg.
+var output = [];
+var n = 1;
+
+function fizzBuzz() {
+
+    while (n <= 100){
+        
+        if(n % 3 === 0 && n % 5 === 0) {
+            output.push("FizzBuzz");
+        } else if (n % 3 === 0) {
+            output.push("Fizz");
+        } else if (n % 5 === 0) {
+            output.push("Buzz");
+        } else {
+            output.push(n);
+        }
+    
+        n++;
+    }
+    
+    console.log(output);
+}
+
+fizzBuzz();
+
+
+23. For Loop
+
+for (i=0; i<2; i++) {
+	// Do something
+}
+
+### NOTE: 
+--- while loop should be used when we have to stay at a specific State
+--- for loop should be used when we have to Iterate some value
+
+
+##### Fibonacci Series #####
+
+function fibonacciGenerator (n) {
+//Do NOT change any of the code above 👆
+    
+    //Write your code here:
+
+    var fibonacciArray = [];
+    
+    if (n === 1){
+        fibonacciArray = [0];
+    }
+    else if (n === 2){
+        fibonacciArray = [0, 1];
+    }
+    else {
+        fibonacciArray = [0, 1];
+        for (var i = 2; i < n; i++) {
+            var arrayLength = fibonacciArray.length;
+            fibonacciArray.push(fibonacciArray[arrayLength - 1] + fibonacciArray[arrayLength - 2]);
+        }
+    }
+
+    return fibonacciArray;
+    //Return an array of fibonacci numbers starting from 0.
+    
+//Do NOT change any of the code below 👇
+}
+
+var f = fibonacciGenerator(5);
+console.log(f);
+
+
+----------------------------------------------------------------------------------------
+** IMP **
+
+24) Scope
+
+i. Local Variables ->
+variables declared inside a function and cannot be used outside the function
+
+ii. Global Variables ->
+variables declared outside a function and can be used by all the functions
+
+*** Variables created inside a Function and If/else or For/While loops
+
+i. var 
+## Function -> Local
+## if/else and For/while loop -> Global
+i.e variables created with var keyword inside if/else/for/while can be used outside
+
+## This thing is only for JavaScript and not with many other languages
+
+ii. let
+## Function -> Local
+## if/else and For/while loop -> Local
+
+iii. const
+## Function -> Local
+## if/else and For/while loop -> Local
+
+
+**** NOTE: So, its always safer to use 'let' and 'const' keywords. 
+From now onwards we will try to avoid using 'var' and use 'let' instead
+
+
+25) const
+
+* if we make an array with const, we cannot assign different array to that.
+But we can change the elements inside array.
+We can push elements to the array.
+
+* Similar is with objects with const. We can change the values of keys
