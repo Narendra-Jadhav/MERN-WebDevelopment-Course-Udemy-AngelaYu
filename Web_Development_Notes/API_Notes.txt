@@ -60,7 +60,7 @@ we have to add that Parameter.
 
 
 **** API KEY got from OpenWeatherMap -> 
-787c33f4061dd537bbb93acbf5d86134
+
 
 **** Endpoint ->
 https://api.openweathermap.org/data/2.5/weather
