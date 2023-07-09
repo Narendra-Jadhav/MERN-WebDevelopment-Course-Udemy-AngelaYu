@@ -1,0 +1,29 @@
+/* External CSS */
+/* Priority Order : Inline >> Internal >> External CSS */
+
+/* Note: Its good to keep the properties we want to change in CSS in Alphabetical order. It helps in debugging.
+e.g. - font-size should be written before width */
+
+body {
+  background-color: #E3FCBF;
+}
+
+hr {
+  /* background-color: white; no need of it as the height is zero */
+  /* border-style: dotted;*/
+  border-style: none;
+  border-top-style: dotted;
+  /*border-style: dotted none none; will also work */
+  /*height: 0px; if we don't mention height, it will be by default 0*/
+  border-color: grey;
+  border-width: 5px;
+  width: 5%;
+}
+
+h1 {
+  color: #14C38E;
+}
+
+h3 {
+  color: #14C38E;
+}

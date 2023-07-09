@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+
+    <!-- this action is for what to do when some action has to be performed.
+    eg. on pressing button in the form we have to perform action of 'root'. So, putting '/' there and not index.html -->
+
+    <!-- this is a post request when we press the button -->
+
+    <!-- even if we don't mention action it is okay, as by default it is in the root '/' -->
+    <form action="/" method="post">
+
+      <!-- method post as we are sending the information to the action route and not getting information -->
+
+      <input type="text" name="num1" placeholder="First Number">
+      <!-- name is like a variable for the input text.
+      placeholder is the initial text in the text box -->
+      <input type="text" name="num2" placeholder="Second Number">
+
+      <button type="submit" name="submit">Calculate</button>
+      <!-- Note: Its important to have Submit type button, for the action.
+      Else if it is of button type it will not trigger any action -->
+    </form>
+
+    <hr>
+    
+    <a href="./bmiCalculator">
+      <button>BMI Calculator</button>
+    </a>
+  </body>
+</html>
+
+<!-- **************** IMP *******************
+
+If we do View Page Source on the website, we are able to see only the html code.
+The javascript code where the logic of Calculation is there, is hidden from the user and it is at the backend.
+So, this is the use of backend.  -->

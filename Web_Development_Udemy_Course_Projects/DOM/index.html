@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website (DOM)</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <!--
+  <body onload="alert('Hello');">
+
+  * Inline JavaScript -> it states that when the body loads alert('Hello')
+  * Inline JavaScript is not good to use, as it is difficult to debug
+  -->
+  <body>
+    <h1 id="title">Hello World</h1>
+
+    <!-- Internal JavaScript -->
+    <!-- Inside script tag the code is written -->
+    <!--
+    <script type="text/javascript">
+      alert("Hello, World");
+    </script>
+     -->
+
+    <!-- External JavaScript -->
+    <!-- script tag having source of the js file is written -->
+
+    <!-- ********************************************************************** -->
+
+    <!-- Document Object Model (DOM) -->
+    <!-- It is like the Tree Diagram of the components of the Document
+    where, the HTML Document has 2 children -> head and body -> and they further will have children -->
+
+    <input type="checkbox">
+    <button class="btn">Click Me</button>
+
+    <ul id="list">
+      <li class="item">
+        <a href="https://www.google.com/">Google</a>
+      </li>
+      <li class="item">Second</li>
+      <li class="item">Third</li>
+    </ul>
+
+    <!-- Using DOM we can get h1 by
+
+    * document, etc are Objects insilde DOM
+
+    * document.firstElementChild.lastElementChild.firstElementChild;
+
+    var heading = document.firstElementChild.lastElementChild.firstElementChild;
+
+    using javascript we can edit h1
+
+    heading.innerHTML = "Good Bye!";
+    heading.style.color = "red";
+
+    document.querySelector("input").click(); -> The checkbox will get clicked
+     -->
+
+
+    <!--
+     1. Properties
+
+    i. Get property
+    car.color; // red
+
+    ii. Set property
+    car.noOfDoors = 0;
+
+
+    2. Methods -> performs the action
+    car.drive();
+
+    ** Difference between Method and Function is that, Method is used for Objects
+
+    eg. button
+    Properties -> innerHTML, style, firstChild
+    Methods -> click(), appendChild(), setAttribute()
+   -->
+
+   <!-- *******************
+   eg.
+   document.firstElementChild.lastElementChild.lastElementChild.lastElementChild.innerHTML = "Apple";
+
+   It changes the list's last item to "Apple"
+
+   ******************* -->
+
+    <!-- <script src="index.js" charset="utf-8"></script> -->
+  </body>
+</html>

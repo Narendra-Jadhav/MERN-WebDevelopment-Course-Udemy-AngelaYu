@@ -1,0 +1,35 @@
+
+<%- include("header") -%>
+<!-- This is EJS Layout -->
+
+    <div class="box" id="heading">
+      <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+      <% for (let i=0; i < newListItems.length; i++) { %>
+
+        <!-- We are adding the item which we typed in this list. So, again from server to the webpage
+        Every single time we add an item we should be able to make new li. So, using for loop for this -->
+
+        <div class="item">
+          <input type="checkbox">
+
+          <p><%= newListItems[i] %></p>
+        </div>
+
+      <% } %>
+
+      <!-- To add the list items we want, we will have to send data from webpage to the server -->
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <!-- By autocomplete="off" we disable the suggestions we get when we have to enter in the text box -->
+
+        <button type="submit" name="list" value=<%= listTitle %>>+</button>
+        <!-- the button has been given name to use in app.js and value of that. Value will be different based
+        on which webpage it is on. So, the listTitle will decide the list -->
+      </form>
+
+    </div>
+
+<%- include("footer") -%>

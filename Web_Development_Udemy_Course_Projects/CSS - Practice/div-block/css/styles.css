@@ -1,0 +1,146 @@
+/* CSS Box Model:
+content -> padding -> border -> margin */
+
+body {
+  /*
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;*/
+  margin: 0;
+}
+
+p {
+  background-color: red;
+  display: inline-block;
+}
+
+span {
+  background-color: blue;
+}
+
+.top-container {
+  background-color: #B3E8E5;
+  border:solid 10px;
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.main-heading {
+  margin-top: 0;
+}
+
+.middle-container {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  border:solid 20px;
+  margin-left: 260px;
+}
+
+.bottom-container {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  border:solid 10px;
+  margin-left: 500px;
+}
+
+.p1 {
+  display: none;
+  /* makes the element disapper without leaving any space of it*/
+}
+
+.p2{
+  visibility: hidden;
+  /* makes the element disapper by leaving its space */
+}
+
+/* CSS Positioning */
+
+.red {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  left: 400px;
+  /* left means -> left edge will move by 400px towards right. Similar movement for top, right, bottom  */
+}
+
+.blue {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+}
+
+.yellow {
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  right: 400px;
+}
+
+.green {
+  background-color: green;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  right: 50px;
+}
+
+.black {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+}
+
+/* Positioning Challenge */
+
+.diagonal { /* Parent element of those children div */
+  height: 300px;
+  position: relative; /* Important */
+}
+
+.red1 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+}
+
+.blue1 {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.yellow1 {
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+/* CSS -> Fixed Position
+->
+Element will remain on that fixed position even if we scroll the webpage.
+Useful for Navigation bar
+*/
+
+.orange {
+  background-color: orange;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}

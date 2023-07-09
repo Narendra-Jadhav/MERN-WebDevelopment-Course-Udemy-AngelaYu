@@ -1,0 +1,39 @@
+
+/* Advanced CSS
+
+* Media Query Breakpoints -> To make changes at certain conditions */
+
+/* @media <type> <feature> {} */
+
+/* e.g.
+@media screen (min-width: 900px){
+  //Change something
+} */
+
+/*
+@media print {
+  Under normal conditions the text color will be black, but on printing the page;
+  the text color of Hello World will become Red
+  h1 {
+    color: red;
+  }
+}
+*/
+
+@media (max-width: 900px) and (min-width: 700px){
+  /* If screen size is 900 or less than 900px and 700 or greater; then change text color to green */
+  h1 {
+    color: green;
+  }
+}
+
+
+/* Selector Priority */
+
+/* 1. Inline CSS
+2. ID
+3. Class
+4. Tag
+
+In each of ID, Class, Tag -> the one same property which is written at the last is applied
+eg. color: red; color: green; -> then green will be applied and not red */

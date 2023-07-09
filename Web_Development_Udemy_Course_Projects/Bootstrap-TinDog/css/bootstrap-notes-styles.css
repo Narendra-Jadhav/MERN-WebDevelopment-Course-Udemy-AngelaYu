@@ -1,0 +1,46 @@
+
+ /* ******************* CSS Property -  Z-index ****************** */
+
+ /* Note: The z-index works only when the position of elements is not static;
+ it should be anything like relative, absolute */
+
+
+.z-index-box {
+  height: 300px;
+  width: 300px;
+}
+
+/* By z-index:
+-1 -> most below
+0 -> original level
+1 -> most above
+
+or it is like whatever numbers it may be, biggest numbered will be at the top, similar with the smallest */
+
+.red {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: -1;
+}
+
+.yellow {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 10px;
+  position: relative;
+  z-index: 0;
+}
+
+.blue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  left: 20px;
+  top: 20px;
+  position: relative;
+  z-index: 1;
+}

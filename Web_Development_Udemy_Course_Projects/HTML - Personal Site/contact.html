@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>Contact Details</h1>
+    <p>Address: My Fictional Address</p>
+    <p>Email: narendraj9193@gmail.com</p>
+    <p>Mobile No.: 9970633106</p>
+
+    <hr>
+
+    <!-- HTML Forms -->
+
+    <form action="mailto:narendrajadhav8459@gmail.com" method="post" enctype="text/plain">
+      <!-- form action-> after clicking submit it will perform that action
+    mailto action sends mail to that email the details entered by the user in the form
+
+    enctype -> it is the encoding type, which is plain text as it is entered by the user -->
+      <label>Your Name: </label>
+      <input type="text" name="yourName" value="">
+      <!-- the name attribute is what which will be written before the input in the email to that email-id -->
+      <br>
+      <label>Your Email: </label>
+      <input type="email" name="yourEmail" value="">
+      <br>
+      <label>Your Message: </label>
+      <br>
+      <textarea name="yourMessage" rows="10" cols="30"></textarea>
+      <!-- textarea creates a box where any text can be written by the user.
+      By the rows and columns we can set the size of the box -->
+      <br>
+      <input type="submit" name="">
+    </form>
+
+    <hr>
+    <hr>
+    <form class="" action="index.html" method="post">
+      <label>Your Name: </label>
+      <input type="text" name="" value="">
+      <br>
+      <input type="color" name="" value="">
+      <!-- for color picker input -->
+      <br>
+      <label>Do you want to sign up to the Email list?</label>
+      <input type="checkbox" name="" value="">
+      <br>
+      <label>Password: </label>
+      <input type="password" name="" value="">
+      <!-- input is masked as it is a password -->
+      <br>
+      <input type="date">
+      <br>
+      <input type="file">
+      <br>
+      <input type="email">
+      <br>
+      <input type="radio">
+      <br>
+      <input type="range">
+      <br>
+      <input type="time">
+      <br>
+      <input type="hidden">
+      <br>
+      <input type="submit" name="">
+    </form>
+
+
+  </body>
+</html>

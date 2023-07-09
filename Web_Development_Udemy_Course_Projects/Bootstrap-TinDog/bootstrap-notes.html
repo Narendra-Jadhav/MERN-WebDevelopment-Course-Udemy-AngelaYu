@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap Notes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-notes-styles.css">
+</head>
+
+<body>
+
+  <!-- ************** Grid System - Bootstrap ************** -->
+
+  <div class="row">
+    <!-- By col we can divide the row into the number of columns as specified, i.e. if 3 col are there,
+    then row will be divided into 3 equal sized columns  -->
+    <div class="col" style="background-color: red; border: 1px solid;">
+      col
+    </div>
+    <div class="col" style="background-color: red; border: 1px solid;">
+      col
+    </div>
+  </div>
+  <div class="row">
+    <!-- In Bootstrap a row is divided into 12 parts
+    col-6 means 6 parts out of 12, i.e. half
+    similar is with col-3, col-4, col-2, etc -->
+    <div class="col-6" style="background-color: green; border: 1px solid;">
+      col-6
+    </div>
+    <div class="col-3" style="background-color: green; border: 1px solid;">
+      col-3
+    </div>
+    <div class="col-2" style="background-color: green; border: 1px solid;">
+      col-2
+    </div>
+    <div class="col-1" style="background-color: green; border: 1px solid;">
+      col-1
+    </div>
+  </div>
+  <div class="row">
+    <!-- Non-responsive 2 parts -->
+    <div class="col-6" style="background-color: green; border: 1px solid;">
+      col-6
+    </div>
+    <div class="col-6" style="background-color: green; border: 1px solid;">
+      col-6
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- By col-md-6, where md is medium, we get Responsive columns; i.e. by col-md,
+    on screen sizes greater than medium, there will be two col, but below medium size,
+    those two col will come one below the other
+
+    Note: Less than medium are for i-pad, tab, mobile -->
+    <div class="col-md-6" style="background-color: yellow; border: 1px solid;">
+      col-md-6
+    </div>
+    <div class="col-md-6" style="background-color: yellow; border: 1px solid;">
+      col-md-6
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- lg-> desktop, laptop; md-> i-pad, tablet; sm-> mobile
+    So, on lg we want 4 col, on md 3 columns and on sm 2 columns -->
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: lightblue; border: 1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: lightblue; border: 1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: lightblue; border: 1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="background-color: lightblue; border: 1px solid;">
+      col-lg-3 col-md-4 col-sm-6
+    </div>
+  </div>
+
+  <!-- Challenge -->
+  <div class="row">
+    <!-- Note: We can ignore col-sm-12 because 12 is always by default, so it will be same even if we don't write it -->
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-12" style="background-color: pink; border: 1px solid;">
+      col-lg-2 col-md-3 col-sm-12
+    </div>
+  </div>
+
+  <br>
+  <!-- ******************* Containers ***************** -->
+
+  <div class="container" style="background-color: red;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+
+  <!-- Containers are used to contain anything. Both container and fluid are responsive.
+  container-fluid takes 100% of the size and is good to see that. -->
+
+  <div class="container-fluid" style="background-color: yellow;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+
+
+  <!-- ******************* CSS Property -  Z-index ****************** -->
+
+  <br>
+  <hr>
+  <div class="z-index-box">
+    <div class="red">
+      Red
+    </div>
+  
+    <div class="yellow">
+      Yellow
+    </div>
+
+    <div class="blue">
+      Blue
+    </div>
+  </div>
+
+  <!-- Note: The html element which is at the bottom is more towards us,
+  i.e. it is placed upside the elements above it in the code -->
+
+</body>
+
+</html>

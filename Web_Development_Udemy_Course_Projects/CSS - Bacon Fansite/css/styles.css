@@ -1,0 +1,50 @@
+/******************* TAG SELECTORS *****************/
+
+h1 {
+  color: red;
+  font-size: 100px;
+}
+
+/*
+img {
+  background-color: red;
+}
+*/
+
+/* Pseudo Classes */
+
+/* on hover the bg color will change to gold */
+img:hover {
+  background-color: gold;
+}
+
+/******************* CLASS SELECTORS *****************/
+
+/* classes can be selected by using dot(.) at the starting */
+.bacon {
+  background-color: green;
+}
+
+.broccoli {
+  background-color: red;
+}
+
+.circle {
+  border-radius: 100%;
+}
+
+
+/******************* ID SELECTORS *****************/
+
+/* IDs canm be selected using hash(#) at the start */
+#heading {
+  color: blue;
+}
+
+/* Note: ID and Class selectors have greater priority than Tag Selectors. So, they override thier properties
+ID is the most specific as a selector */
+
+/* Note: 1. Difference between class and id is that - One class can be used on different tags, while
+one id can only be used on one tag
+
+2. On one tag more than one classes can be used, but only a single id can be used on one tag */
